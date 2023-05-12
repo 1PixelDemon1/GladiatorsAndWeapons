@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="GladiatorsAndWeapons.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IGladiator.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
