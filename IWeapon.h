@@ -3,8 +3,13 @@
 #include <cstdint>
 #include <string>
 
+class IGladiator;
+
 class IWeapon {
-private:
+
+	friend class IGladiator;
+
+protected:
 	int32_t baseDamage;
 	std::string name;
 public:

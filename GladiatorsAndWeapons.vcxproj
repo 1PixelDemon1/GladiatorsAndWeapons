@@ -130,7 +130,18 @@
     <ClCompile Include="GladiatorsAndWeapons.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bow.h" />
+    <ClInclude Include="ChainMail.h" />
+    <ClInclude Include="HeavyGladiator.h" />
+    <ClInclude Include="IArmor.h" />
     <ClInclude Include="IGladiator.h" />
+    <ClInclude Include="IWeapon.h" />
+    <ClInclude Include="Lats.h" />
+    <ClInclude Include="LeatherArmor.h" />
+    <ClInclude Include="LightWeightGladiator.h" />
+    <ClInclude Include="PairedSwords.h" />
+    <ClInclude Include="RegularGladiator.h" />
+    <ClInclude Include="Spear.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

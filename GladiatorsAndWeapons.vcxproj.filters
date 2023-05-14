@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы заголовков\Weapon">
+      <UniqueIdentifier>{fe517887-41a8-4562-8ba2-165d9bc1330d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Armor">
+      <UniqueIdentifier>{9474d085-a226-4c0f-9b48-24c76cd02227}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Gladiator">
+      <UniqueIdentifier>{551b5b38-adc2-4efb-b45b-b764275ebd68}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GladiatorsAndWeapons.cpp">
@@ -22,6 +31,39 @@
   <ItemGroup>
     <ClInclude Include="IGladiator.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="IWeapon.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="IArmor.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Spear.h">
+      <Filter>Файлы заголовков\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="PairedSwords.h">
+      <Filter>Файлы заголовков\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="Bow.h">
+      <Filter>Файлы заголовков\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="HeavyGladiator.h">
+      <Filter>Файлы заголовков\Gladiator</Filter>
+    </ClInclude>
+    <ClInclude Include="LightWeightGladiator.h">
+      <Filter>Файлы заголовков\Gladiator</Filter>
+    </ClInclude>
+    <ClInclude Include="RegularGladiator.h">
+      <Filter>Файлы заголовков\Gladiator</Filter>
+    </ClInclude>
+    <ClInclude Include="ChainMail.h">
+      <Filter>Файлы заголовков\Armor</Filter>
+    </ClInclude>
+    <ClInclude Include="LeatherArmor.h">
+      <Filter>Файлы заголовков\Armor</Filter>
+    </ClInclude>
+    <ClInclude Include="Lats.h">
+      <Filter>Файлы заголовков\Armor</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
