@@ -5,7 +5,7 @@ class HeavyGladiator : public IGladiator
 {
 public:
 	HeavyGladiator(IWeapon* weapon, IArmor* armor, int32_t health, std::string name = "Heavy") : 
-		IGladiator(weapon, armor, health, name) {
+		IGladiator(weapon, armor, health, name, "sprites/gladiator_1.png") {
 		setDamage(getDamage() / 1.6);
 		setDefense(getDefense() * 1.6);
 	}

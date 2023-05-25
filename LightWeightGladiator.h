@@ -5,7 +5,7 @@ class LightWeightGladiator : public IGladiator
 {
 public:
 	LightWeightGladiator(IWeapon* weapon, IArmor* armor, int32_t health, std::string name = "Light Weight") :
-		IGladiator(weapon, armor, health, name) {
+		IGladiator(weapon, armor, health, name, "") {
 		setDamage(getDamage() * 1.5);
 		setDefense(getDefense() / 1.7);
 	}

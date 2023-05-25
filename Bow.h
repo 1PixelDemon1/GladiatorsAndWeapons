@@ -10,7 +10,7 @@ private:
 	std::mt19937 mt;
 
 public:
-	Bow(int32_t baseDamage, std::string name, std::mt19937& mt) : IWeapon(baseDamage, name) {
+	Bow(int32_t baseDamage, std::string name, std::mt19937& mt) : IWeapon(baseDamage, name, "sprites/bow.png") {
 		dist = std::uniform_int_distribution<int>(0, 15);
 		this->mt = mt;
 	}

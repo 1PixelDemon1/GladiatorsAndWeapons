@@ -10,7 +10,7 @@ private:
 	std::mt19937 mt;
 
 public:
-	PairedSwords(int32_t baseDamage, std::string name, std::mt19937& mt) : IWeapon(baseDamage, name) {
+	PairedSwords(int32_t baseDamage, std::string name, std::mt19937& mt) : IWeapon(baseDamage, name, "sprites/paired_swords.png") {
 		dist = std::uniform_int_distribution<int>(0, 2);
 		this->mt = mt;
 	}

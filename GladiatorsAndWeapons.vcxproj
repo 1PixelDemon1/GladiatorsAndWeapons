@@ -128,8 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GladiatorsAndWeapons.cpp" />
+    <ClCompile Include="lodepng\lodepng.cpp" />
+    <ClCompile Include="PNGstConsoleIMage.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animations.h" />
     <ClInclude Include="Bow.h" />
     <ClInclude Include="ChainMail.h" />
     <ClInclude Include="HeavyGladiator.h" />
@@ -139,7 +142,9 @@
     <ClInclude Include="Lats.h" />
     <ClInclude Include="LeatherArmor.h" />
     <ClInclude Include="LightWeightGladiator.h" />
+    <ClInclude Include="lodepng\lodepng.h" />
     <ClInclude Include="PairedSwords.h" />
+    <ClInclude Include="PNGstConsoleIMage.h" />
     <ClInclude Include="RegularGladiator.h" />
     <ClInclude Include="Spear.h" />
   </ItemGroup>

@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
 #include <random>
 #include <thread>
 
@@ -13,6 +14,9 @@
 #include "RegularGladiator.h"
 #include "HeavyGladiator.h"
 #include "LightWeightGladiator.h"
+
+#include "PNGstConsoleIMage.h"
+#include "Animations.h"
 
 using namespace std;
 
@@ -33,11 +37,14 @@ int main()
 	std::random_device rt;
 	std::mt19937 mt(rt());
 
-#define PRE_LOADED_
+	system("color F0");
+
+#define PRE_LOADED
 
 #ifdef PRE_LOADED
-	IGladiator* gladiator1 = new HeavyGladiator(new Spear(15, "God`s spear"), new LeatherArmor(7, 50, "Regular leather armor"), 60, "Wulfus");
-	IGladiator* gladiator2 = new RegularGladiator(new PairedSwords(12, "Cerberus fangs", mt), new Lats(7, 50, "Regular lats", mt), 60, "Hector");
+	IGladiator* gladiator1 = new HeavyGladiator(new Spear(20, "God`s spear"), new LeatherArmor(7, 50, "Regular leather armor"), 60, "Wulfus");
+	IGladiator* gladiator2 = new HeavyGladiator(new PairedSwords(20, "Cerberus fangs", mt), new Lats(7, 50, "Regular lats", mt), 60, "Hector");
+	gladiator2->flip();
 #else
 
 
@@ -163,16 +170,36 @@ int main()
 
 #endif // PRE_LOADED
 	std::cout << "\n\n\nBATTLE BEGINS!\n\n\n";
-
+	gladiator1->setPosition(200, 200);
+	gladiator2->setPosition(700, 200);
 	while (*gladiator1 && *gladiator2) {
 		std::cout << std::endl << *gladiator1 << *gladiator2 << std::endl;
 		
-		gladiator1->dealDamage(*gladiator2);
-		
-		if(*gladiator2)
+		gladiator1->setPosition(400, 200);
+		gladiator1->draw();
+		gladiator2->draw();
+		gladiator1->dealDamage(*gladiator2);		
+		gladiator1->setPosition(200, 200);		
+		system("cls");
+		gladiator1->draw();
+		gladiator2->draw();
+		this_thread::sleep_for(std::chrono::milliseconds(300));
+		system("cls");
+		if (*gladiator2) {
+			gladiator2->setPosition(500, 200);
+			gladiator1->draw();
+			gladiator2->draw();
 			gladiator2->dealDamage(*gladiator1);
-
-		this_thread::sleep_for(std::chrono::milliseconds(1500));
+			gladiator2->setPosition(700, 200);
+		}
+		
+		system("cls");
+		gladiator1->draw();
+		gladiator2->draw();
+		this_thread::sleep_for(std::chrono::milliseconds(300));
+		system("cls");
+		
+		
 	}
 
 	std::cout << "THE END!";
