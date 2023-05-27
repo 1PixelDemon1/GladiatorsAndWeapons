@@ -106,3 +106,25 @@ public:
 };
 HWND Damage::hwnd{GetConsoleWindow()};
 HDC Damage::dc{GetDC(hwnd)};
+
+class Dead {
+	PNGstConsoleIMage dead;	
+	int32_t x;
+	int32_t y;
+	public:
+		Dead(int32_t x, int32_t y) : dead{"sprites/dead.png"}, x{ x }, y{ y }  {
+			dead.setPosition(x, y);
+		}
+
+		void flip() {
+			dead.flipped = !dead.flipped;
+		}
+
+		void operator()() {
+			dead.draw();
+		}
+
+		void setPosition(int32_t x, int32_t y) {
+			dead.setPosition(x, y);
+		}
+};

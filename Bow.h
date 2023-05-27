@@ -17,7 +17,7 @@ public:
 	// Унаследовано через IWeapon
 	virtual int32_t damage() {
 		int32_t temp{ dist(mt) };
-		if (temp > 13)
+		if (temp == 15)
 			return baseDamage * 5;
 		else if (temp < 8) {
 			return 0;

@@ -19,6 +19,7 @@ protected:
 	HealthBar healthBar;
 	Slash slash;
 	Damage damage;
+	Dead deadImage;
 
 	int32_t getDamage() {
 		return weapon.baseDamage;
@@ -41,20 +42,21 @@ public:
 		weapon{ *weapon }, armor{ *armor }, health{ health }, 
 		name{ name }, image{filename},
 		healthBar{ 0, 0, health, health }, 
-		slash{ 0, 0 }, damage{ 0, 0 } {
+		slash{ 0, 0 }, damage{ 0, 0 }, deadImage{0, 0} {
 
 		slash.flip();
 	}
 
-	virtual void dead()  = 0;
+	virtual void dead() = 0;
 
-	virtual void win()  = 0;
+	virtual void win() = 0;
 
 	virtual void setPosition(int32_t x, int32_t y) {
 		image.setPosition(x, y);
 		healthBar.setPosition(x, y + image.getHeight() + 5);
 		armor.setPosition(x, y);
 		weapon.setPosition(x, y);
+		deadImage.setPosition(x, y);
 	}
 
 	virtual void draw() {
